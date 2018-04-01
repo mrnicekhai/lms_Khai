@@ -1,0 +1,7 @@
+
+--    _       __  __   ____
+--   | |     |  \/  | / ___|
+--   | |     | |\/| | \___ \
+--   | |___  | |  | |  ___) |
+--   |_____| |_|  |_| |____/
+--  ${Ansi.RED} :: Spring Boot${spring-boot.formatted-version} :: ${Ansi.DEFAULT}

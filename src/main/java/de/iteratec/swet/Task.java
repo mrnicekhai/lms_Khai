@@ -7,16 +7,15 @@ import javax.persistence.Id;
 
 
 /**
+ * Task entity for demo purpose.
+ *
  * @author abr, anton.brass@iteratec.de on 04.04.2016.
  */
 @Entity
 public class Task {
-
-
     @Id
     @GeneratedValue
     private Long id;
-
     @Column
     private String name;
 
