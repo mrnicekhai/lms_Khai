@@ -54,8 +54,7 @@ public class MitarbeiterController {
 
     // update existing employee
     // missing:
-    // - input of 1 or 2 parameters
-    // - decide which values to update (vorName, nachName)
+    // - input less than 3 parameters -> all parameters have to be provided
     @PutMapping("/mitarbeiter/{kuerzel}")
     public void updateEmployee(@RequestBody Mitarbeiter updateMitarbeiter, @PathVariable String kuerzel) {
         Mitarbeiter mitarbeiter = mitarbeiterRepository.findByKuerzel(kuerzel);
@@ -85,17 +84,6 @@ public class MitarbeiterController {
         LOGGER.info("removed Mitarbeiter: {}", kuerzel);
         mitarbeiterRepository.delete(mitarbeiter);
     }
-
-    // Mitarbeiter Kompetenzbereiche
-    // /api/mitarbeiter/{kuerzel}/kompetenzbereiche
-    // GET: liefert die aktuellen Kompetenzbereiche des MA und die entsprechende Einstufung (404 falls MA nicht gefunden)
-    // PUT: Setzen der Kompetenzbereiche und -einstufungen des MA (404 falls MA nicht gefunden)
-
-    // Mitarbeiter Laufbahnstufen
-    // /api/mitarbeiter/{kuerzel}/laufbahnstufen
-    // GET: liefert die errechneten aktuellen Laufbahnstufen eines MA
-    // liegen keine Kompetenzbereiche vor, wird nichts geliefert
-    // (404 falls MA nicht gefunden)
 
     @GetMapping
     @RequestMapping(value = "/byVorName/{vorName}")

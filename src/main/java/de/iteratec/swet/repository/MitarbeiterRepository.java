@@ -14,7 +14,7 @@ public interface MitarbeiterRepository extends JpaRepository<Mitarbeiter, Long> 
      * Get an employee by first name
      *
      * @param vorName the name of the task
-     * @return the Task with provided name
+     * @return the employee with provided name
      */
     public Mitarbeiter findByVorName(final String vorName);
 
